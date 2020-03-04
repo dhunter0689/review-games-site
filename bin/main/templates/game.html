@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Game</title>
+</head>
+
+<body>
+    <h1>A Single Game</h1>
+
+    <div th:each="game: ${games}">
+        <p th:text="${game.name}"></p>
+        <p th:text="${game.description}"></p>
+        <a href="http://localhost:8080/show-games">Back to Home</a>
+    </div>
+
+</body>
+
+</html>

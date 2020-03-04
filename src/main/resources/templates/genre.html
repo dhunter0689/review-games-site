@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Topic</title>
+</head>
+
+<body>
+    <header>
+        <h1>A Genre</h1>
+    </header>
+
+    <div th:each="genre: ${genres}">
+        <h2 th:text="${genre.name}"></h2>
+        <a href="http://localhost:8080/show-games">Back to Home</a>
+    </div>
+
+    <div th:each="game: ${games}">
+        <h2>
+            <a th:href="@{/game(id=${game.id})}" th:text="${game.name}"></a>"
+        </h2>
+
+    </div>
+
+</body>
+
+</html>

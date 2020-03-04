@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A List of Genres</title>
+</head>
+
+<body>
+    <header>
+        <h1>A List of Games</h1>
+    </header>
+
+
+    <div th:each="genre: ${genres}">
+        <h2>
+            <a th:href="@{/genre(id=${genre.id})}" th:text="${genre.name}"></a>
+        </h2>
+    </div>
+
+</body>
+
+</html>
